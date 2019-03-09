@@ -431,6 +431,17 @@ class Bitmap(object):
 
 		caras = objetos.faces
 		vertexes = objetos.vertices
+		materiales_obj = objetos.materials
+
+		mtl = Mtl('./modelos/ReyBoo.mtl')
+		materiales_mtl = mtl.materiales
+		kd_mtl = mtl.kd
+
+		print('Materiales en el obj')
+		print(materiales_obj)
+		print('Materiales en el mtl')
+		print(materiales_mtl)
+
 		for face in caras:
 			vcount = len(face)
 			if vcount == 3:
@@ -476,6 +487,6 @@ class Bitmap(object):
 				#Si la tonalidad es menor a 0, es decir, negativo, que no pinte nada
 				if tonalidad < 0:
 					continue
-
+					
 				self.triangulos(lista_vertices[0], lista_vertices[1], lista_vertices[2], color(tonalidad, tonalidad, tonalidad))
 				self.triangulos(lista_vertices[0], lista_vertices[2], lista_vertices[3], color(tonalidad, tonalidad, tonalidad))

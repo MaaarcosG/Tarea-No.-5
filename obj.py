@@ -9,6 +9,7 @@ class Obj(object):
             self.lines = f.read().splitlines()
         self.vertices = []
         self.faces = []
+        self.materials = []
         self.read()
 
     def read(self):
@@ -19,6 +20,9 @@ class Obj(object):
                     self.vertices.append(list(map(float, value.split(' '))))
                 elif prefix == 'f':
                     self.faces.append([list(map(int, face.split('/'))) for face in value.split(' ')])
+                elif prefix == 'usemtl':
+                    self.materials.append(list(value.split(' ')))
+
 
 #Clase que abre y guarda dentro de una lista los valores de kd
 class Mtl(object):
@@ -39,7 +43,7 @@ class Mtl(object):
                     self.kd.append(list(map(float, valor.split(' '))))
 
                 if prefix == 'newmtl':
-                    self.nombre.append(list(valor.split(' ')))
+                    self.materiales.append(list(valor.split(' ')))
 
 
 
