@@ -1,5 +1,4 @@
 from bitmap import *
-from obj import Mtl
 # Universidad del Valle de Guatemala
 # Grafica por Computadora
 # Nombre: Marcos Gutierrez
@@ -12,7 +11,7 @@ def reyBoo():
 	#colores = Mtl('./modelos/ReyBoo.mtl')
 
 
-	renderizando.renderer_color('./modelos/ReyBoo.obj',(100,100,100),(3,3,3))
+	renderizando.renderer_color('./modelos/ReyBoo.obj','./modelos/ReyBoo.mtl', (100,100,100),(3,3,3))
 	renderizando.archivo('output.bmp')
 
 print("Renderizando los modelos obj")
