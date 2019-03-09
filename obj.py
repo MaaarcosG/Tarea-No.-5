@@ -43,7 +43,7 @@ class Obj(object):
                     self.keyMaterials.append(valor)
                 #Valores de los colores de difusion
                 if prefix == 'Kd':
-                    self.kd.append(list(map(float, valor.split(' '))))
+                    self.kd.append([list(map(float, valor.split(' ')))])
 
 
 """

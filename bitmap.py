@@ -453,8 +453,6 @@ class Bitmap(object):
 				if filename_materials:
 					material_nombre = face[2]
 
-					limite = objetos.keyMaterials.index(material_nombre)
-					colores = objetos.kd[limite]
 
 					if intensidad < 0:
 						continue
@@ -497,8 +495,7 @@ class Bitmap(object):
 				if filename_materials:
 					material_nombre = face[3]
 
-					limite = objetos.keyMaterials.index(material_nombre)
-					colores = objetos.kd[limite]
+
 
 					if intensidad < 0:
 						continue
